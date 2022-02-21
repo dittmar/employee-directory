@@ -20,6 +20,8 @@
 		43BCA8B227C418F400E76D87 /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA8B027C418F400E76D87 /* EmployeeTableViewCell.swift */; };
 		43BCA8B327C418F400E76D87 /* EmployeeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43BCA8B127C418F400E76D87 /* EmployeeTableViewCell.xib */; };
 		43BCA8B627C41BB500E76D87 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 43BCA8B527C41BB500E76D87 /* SDWebImage */; };
+		43BCA8B827C4240700E76D87 /* EmployeeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA8B727C4240700E76D87 /* EmployeeListViewModel.swift */; };
+		43BCA8BC27C429A600E76D87 /* English.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43BCA8BB27C429A600E76D87 /* English.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		4314AA2427B97B2600EC3EB6 /* Employee_DirectoryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee_DirectoryUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		43BCA8B027C418F400E76D87 /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
 		43BCA8B127C418F400E76D87 /* EmployeeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeTableViewCell.xib; sourceTree = "<group>"; };
+		43BCA8B727C4240700E76D87 /* EmployeeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewModel.swift; sourceTree = "<group>"; };
+		43BCA8BB27C429A600E76D87 /* English.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = English.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,7 @@
 				4314AA0A27B97B2500EC3EB6 /* Assets.xcassets */,
 				4314AA0C27B97B2500EC3EB6 /* LaunchScreen.storyboard */,
 				4314AA0F27B97B2500EC3EB6 /* Info.plist */,
+				43BCA8BB27C429A600E76D87 /* English.strings */,
 			);
 			path = "Employee Directory";
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 				4314AA0527B97B2100EC3EB6 /* EmployeeListViewController.swift */,
 				43BCA8B027C418F400E76D87 /* EmployeeTableViewCell.swift */,
 				43BCA8B127C418F400E76D87 /* EmployeeTableViewCell.xib */,
+				43BCA8B727C4240700E76D87 /* EmployeeListViewModel.swift */,
 			);
 			path = "Employee List View";
 			sourceTree = "<group>";
@@ -267,6 +273,7 @@
 			files = (
 				4314AA0E27B97B2500EC3EB6 /* LaunchScreen.storyboard in Resources */,
 				43BCA8B327C418F400E76D87 /* EmployeeTableViewCell.xib in Resources */,
+				43BCA8BC27C429A600E76D87 /* English.strings in Resources */,
 				4314AA0B27B97B2500EC3EB6 /* Assets.xcassets in Resources */,
 				4314AA0927B97B2100EC3EB6 /* Main.storyboard in Resources */,
 			);
@@ -294,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4314AA0627B97B2100EC3EB6 /* EmployeeListViewController.swift in Sources */,
+				43BCA8B827C4240700E76D87 /* EmployeeListViewModel.swift in Sources */,
 				43BCA8B227C418F400E76D87 /* EmployeeTableViewCell.swift in Sources */,
 				4314AA0227B97B2100EC3EB6 /* AppDelegate.swift in Sources */,
 				4314AA0427B97B2100EC3EB6 /* SceneDelegate.swift in Sources */,
