@@ -18,18 +18,31 @@ final class EmployeeListViewController: UIViewController {
     
     employeeTableView.dataSource = self
     employeeTableView.delegate = self
+    employeeTableView.refreshControl = UIRefreshControl()
+    employeeTableView.refreshControl?.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
     
     employeeTableView.register(UINib(nibName: String(describing: EmployeeTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: EmployeeTableViewCell.self))
     
+    loadEmployees()
+  }
+  
+  @objc private func handleRefresh() {
+    loadEmployees()
+    
+    DispatchQueue.main.async {
+      self.employeeTableView.refreshControl?.endRefreshing()
+    }
+  }
+  
+  // Load the employees from the server
+  private func loadEmployees() {
     Task {
       await employeeListViewModel.fetchEmployees()
     }
   }
 }
 
-extension EmployeeListViewController: UITableViewDelegate {
-  
-}
+extension EmployeeListViewController: UITableViewDelegate {}
 
 extension EmployeeListViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,8 +62,8 @@ extension EmployeeListViewController: UITableViewDataSource {
 
 extension EmployeeListViewController: EmployeeListViewModelDelegate {
   func didUpdateEmployees() {
-    DispatchQueue.main.async { [weak self] in
-      self?.employeeTableView.reloadData()
+    DispatchQueue.main.async {
+      self.employeeTableView.reloadData()
     }
   }
 }
