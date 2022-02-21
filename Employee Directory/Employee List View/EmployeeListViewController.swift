@@ -4,6 +4,8 @@
 //
 //  Created by Kevin Dittmar on 2/13/22.
 //
+//  Lists all of the employees for the employee directory
+//
 
 import UIKit
 
