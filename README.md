@@ -7,7 +7,7 @@ This is the employee directory app that makes use of the API at https://github.c
 - GitHub Actions for CI/CD
 
 ## Steps to run the app
-- Run the app through Xcode with the Employee Directory scheme on any iPhone device.  It will have to be an iOS 15 device or later.  I decided to make use of some of the newer stuff.
+- Run the app through Xcode with the Employee Directory scheme on any iPhone device.  It will have to be an iOS 15 device or later.  I decided to make use of some of the newer stuff.  If this fails, try clicking File > Packages > Update to Latest Package Versions to make sure that Swift Package Manager dependencies were downloaded successfully.
 - The app will load with an error message.  This is expected, because the app starts off by calling the endpoint that returns an empty list.  This is meant to make it easier for the folks who are running my app to test out the three scenarios for the app, which are empty list, malformed response, and successful response.  I wouldn't send the app to the App Store like this :)
 - If you tap the button for the "normal" endpoint, you'll see the fairweather path of the app
 - The app should fetch all of the employees and load them in a list with their name, e-mail, phone number (if available), and team name.  If no phone is available, "No phone provided" should appear instead
