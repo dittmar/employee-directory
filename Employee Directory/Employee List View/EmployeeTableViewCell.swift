@@ -30,7 +30,7 @@ final class EmployeeTableViewCell: UITableViewCell {
     employeePhoneLabel.text = employee.phoneNumber ?? NSLocalizedString("NoEmployeePhone", comment: "No phone provided")
     employeeTeamLabel.text = employee.team.rawValue
     
-    /*if let imageUrlString = employee.smallPhotoUrlString,
+    if let imageUrlString = employee.smallPhotoUrlString,
        let imageUrl = URL(string: imageUrlString) {
       
       imageLoader.loadImage(imageUrl: imageUrl) { [weak self] result in
@@ -46,10 +46,10 @@ final class EmployeeTableViewCell: UITableViewCell {
           }
         }
       }
-    } else {*/
+    } else {
       // If we don't have a valid image URL, make sure the image view returns to an empty state
       updateImage(nil)
-    //}
+    }
   }
   
   /**

@@ -20,18 +20,71 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jhc-1s-cfo" userLabel="Error View">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PZz-jc-Rws">
+                                        <rect key="frame" x="35.5" y="197.5" width="343" height="323"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="XfR-NZ-DNo">
+                                                <rect key="frame" x="91.5" y="0.0" width="160" height="169.5"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry, we can't load any employees right now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DzS-AP-paf">
+                                                <rect key="frame" x="0.0" y="179.5" width="343" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPA-nI-P6h">
+                                                <rect key="frame" x="72.5" y="210" width="198.5" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Retry with normal endpoint"/>
+                                                <connections>
+                                                    <action selector="tappedRetry:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uMS-6f-UOz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xox-xl-bNi">
+                                                <rect key="frame" x="63" y="251" width="217" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Retry with empty list endpoint"/>
+                                                <connections>
+                                                    <action selector="tappedRetryEmpty:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7my-PO-6GF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27H-oN-w7r">
+                                                <rect key="frame" x="44" y="292" width="255.5" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Retry with malformed data endpoint"/>
+                                                <connections>
+                                                    <action selector="tappedRetryMalformed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M0N-Uf-lh0"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="PZz-jc-Rws" firstAttribute="centerY" secondItem="Jhc-1s-cfo" secondAttribute="centerY" constant="-50" id="FLG-1T-und"/>
+                                    <constraint firstItem="PZz-jc-Rws" firstAttribute="centerX" secondItem="Jhc-1s-cfo" secondAttribute="centerX" id="Mba-zw-V93"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Vf6-8H-m71" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2Wr-qH-GAP"/>
+                            <constraint firstItem="Jhc-1s-cfo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3jH-qg-nyy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Vf6-8H-m71" secondAttribute="bottom" id="9Lx-VS-ghf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jhc-1s-cfo" secondAttribute="trailing" id="9wr-ei-oLB"/>
+                            <constraint firstItem="Jhc-1s-cfo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="O3y-GA-4qe"/>
                             <constraint firstItem="Vf6-8H-m71" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bw1-jq-7sv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jhc-1s-cfo" secondAttribute="bottom" id="d4Y-09-gg5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vf6-8H-m71" secondAttribute="trailing" id="eGB-U9-2jQ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="employeeTableView" destination="Vf6-8H-m71" id="O8c-Eb-UlG"/>
+                        <outlet property="errorView" destination="Jhc-1s-cfo" id="noT-rT-Twc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -40,6 +93,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="placeholder" width="160" height="169.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
