@@ -3,6 +3,7 @@
 //  Employee Directory
 //
 //  Created by Kevin Dittmar on 2/21/22.
+//  View model for the employee list view
 //
 
 import EmployeeDirectoryApi
@@ -20,30 +21,30 @@ final class EmployeeListViewModel {
     case malformed
   }
   
+  private let api: Api
   private weak var delegate: EmployeeListViewModelDelegate?
   private(set) var employees = [Employee]()
   
-  init(delegate: EmployeeListViewModelDelegate?) {
+  init(delegate: EmployeeListViewModelDelegate?, api: Api = .shared) {
     self.delegate = delegate
+    self.api = api
   }
   
-  /// Update the list of employees from the server and notify the UI that employees has been updated
+  /** Update the list of employees from the server and notify the UI that employees has been updated
+   - Parameter type: the version of the `GetEmployeesEndpoint` to call.  This parameter wouldn't exist in a production version of this app.  It's only here to make it easier for reviewers to test the non-success scenarios
+   */
   func fetchEmployees(type: EndpointType) async throws {
-    // TODO (dittmar): this switch isn't production code.  This is just meant
-    // to make it easier for anyone reviewing this app to see all the error states
-    let endpoint: GetEmployeesEndpoint
+    let response: GetEmployeesEndpoint.Response
     switch type {
     case .normal:
-      endpoint = .getEmployees
+      response = try await api.fetchEmployees()
     case .empty:
-      endpoint = .getEmptyEmployees
+      response = try await api.fetchEmployeesEmpty()
     case .malformed:
-      endpoint = .getMalformedEmployees
+      response = try await api.fetchEmployeesMalformed()
     }
-    
-    let response = try await endpoint.invoke()
 
-    employees = response?.employees ?? []
+    employees = response.employees
     delegate?.didUpdateEmployees()
   }
 }

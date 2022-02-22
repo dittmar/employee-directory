@@ -13,9 +13,7 @@
 		4314AA0927B97B2100EC3EB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4314AA0727B97B2100EC3EB6 /* Main.storyboard */; };
 		4314AA0B27B97B2500EC3EB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4314AA0A27B97B2500EC3EB6 /* Assets.xcassets */; };
 		4314AA0E27B97B2500EC3EB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4314AA0C27B97B2500EC3EB6 /* LaunchScreen.storyboard */; };
-		4314AA1927B97B2600EC3EB6 /* Employee_DirectoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4314AA1827B97B2600EC3EB6 /* Employee_DirectoryTests.swift */; };
-		4314AA2327B97B2600EC3EB6 /* Employee_DirectoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4314AA2227B97B2600EC3EB6 /* Employee_DirectoryUITests.swift */; };
-		4314AA2527B97B2600EC3EB6 /* Employee_DirectoryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4314AA2427B97B2600EC3EB6 /* Employee_DirectoryUITestsLaunchTests.swift */; };
+		4321532127C481F000BC1F64 /* EmployeeTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4321532027C481F000BC1F64 /* EmployeeTableViewCellViewModel.swift */; };
 		43BCA8AD27C4176D00E76D87 /* EmployeeDirectoryApi in Frameworks */ = {isa = PBXBuildFile; productRef = 43BCA8AC27C4176D00E76D87 /* EmployeeDirectoryApi */; };
 		43BCA8B227C418F400E76D87 /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA8B027C418F400E76D87 /* EmployeeTableViewCell.swift */; };
 		43BCA8B327C418F400E76D87 /* EmployeeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43BCA8B127C418F400E76D87 /* EmployeeTableViewCell.xib */; };
@@ -23,17 +21,14 @@
 		43BCA8B827C4240700E76D87 /* EmployeeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA8B727C4240700E76D87 /* EmployeeListViewModel.swift */; };
 		43BCA8BC27C429A600E76D87 /* English.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43BCA8BB27C429A600E76D87 /* English.strings */; };
 		43BCA8BF27C43AE200E76D87 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA8BE27C43AE200E76D87 /* ImageLoader.swift */; };
+		43BCA8C427C466EE00E76D87 /* EmployeeListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA8C327C466EE00E76D87 /* EmployeeListViewModelTests.swift */; };
+		43BCA8C627C4678C00E76D87 /* ImageLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA8C527C4678C00E76D87 /* ImageLoaderTests.swift */; };
+		43BCA8C827C467A800E76D87 /* EmployeeTableViewCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA8C727C467A800E76D87 /* EmployeeTableViewCellViewModelTests.swift */; };
+		43BCA8CC27C4760B00E76D87 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA8CB27C4760B00E76D87 /* Api.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		4314AA1527B97B2600EC3EB6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4314A9F627B97B2100EC3EB6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4314A9FD27B97B2100EC3EB6;
-			remoteInfo = "Employee Directory";
-		};
-		4314AA1F27B97B2600EC3EB6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4314A9F627B97B2100EC3EB6 /* Project object */;
 			proxyType = 1;
@@ -52,15 +47,16 @@
 		4314AA0D27B97B2500EC3EB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4314AA0F27B97B2500EC3EB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4314AA1427B97B2600EC3EB6 /* Employee DirectoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Employee DirectoryTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4314AA1827B97B2600EC3EB6 /* Employee_DirectoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee_DirectoryTests.swift; sourceTree = "<group>"; };
-		4314AA1E27B97B2600EC3EB6 /* Employee DirectoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Employee DirectoryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4314AA2227B97B2600EC3EB6 /* Employee_DirectoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee_DirectoryUITests.swift; sourceTree = "<group>"; };
-		4314AA2427B97B2600EC3EB6 /* Employee_DirectoryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee_DirectoryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4321532027C481F000BC1F64 /* EmployeeTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		43BCA8B027C418F400E76D87 /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
 		43BCA8B127C418F400E76D87 /* EmployeeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeTableViewCell.xib; sourceTree = "<group>"; };
 		43BCA8B727C4240700E76D87 /* EmployeeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewModel.swift; sourceTree = "<group>"; };
 		43BCA8BB27C429A600E76D87 /* English.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = English.strings; sourceTree = "<group>"; };
 		43BCA8BE27C43AE200E76D87 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		43BCA8C327C466EE00E76D87 /* EmployeeListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewModelTests.swift; sourceTree = "<group>"; };
+		43BCA8C527C4678C00E76D87 /* ImageLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderTests.swift; sourceTree = "<group>"; };
+		43BCA8C727C467A800E76D87 /* EmployeeTableViewCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCellViewModelTests.swift; sourceTree = "<group>"; };
+		43BCA8CB27C4760B00E76D87 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,13 +76,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4314AA1B27B97B2600EC3EB6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -95,7 +84,6 @@
 			children = (
 				4314AA0027B97B2100EC3EB6 /* Employee Directory */,
 				4314AA1727B97B2600EC3EB6 /* Employee DirectoryTests */,
-				4314AA2127B97B2600EC3EB6 /* Employee DirectoryUITests */,
 				4314A9FF27B97B2100EC3EB6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,7 +93,6 @@
 			children = (
 				4314A9FE27B97B2100EC3EB6 /* Employee Directory.app */,
 				4314AA1427B97B2600EC3EB6 /* Employee DirectoryTests.xctest */,
-				4314AA1E27B97B2600EC3EB6 /* Employee DirectoryUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,7 +100,7 @@
 		4314AA0027B97B2100EC3EB6 /* Employee Directory */ = {
 			isa = PBXGroup;
 			children = (
-				43BCA8AF27C418A700E76D87 /* App Delegate */,
+				43BCA8AF27C418A700E76D87 /* App */,
 				43BCA8AE27C4188400E76D87 /* Employee List View */,
 				43BCA8BD27C43AD400E76D87 /* Helpers */,
 				4314AA0A27B97B2500EC3EB6 /* Assets.xcassets */,
@@ -127,18 +114,11 @@
 		4314AA1727B97B2600EC3EB6 /* Employee DirectoryTests */ = {
 			isa = PBXGroup;
 			children = (
-				4314AA1827B97B2600EC3EB6 /* Employee_DirectoryTests.swift */,
+				43BCA8C327C466EE00E76D87 /* EmployeeListViewModelTests.swift */,
+				43BCA8C727C467A800E76D87 /* EmployeeTableViewCellViewModelTests.swift */,
+				43BCA8C527C4678C00E76D87 /* ImageLoaderTests.swift */,
 			);
 			path = "Employee DirectoryTests";
-			sourceTree = "<group>";
-		};
-		4314AA2127B97B2600EC3EB6 /* Employee DirectoryUITests */ = {
-			isa = PBXGroup;
-			children = (
-				4314AA2227B97B2600EC3EB6 /* Employee_DirectoryUITests.swift */,
-				4314AA2427B97B2600EC3EB6 /* Employee_DirectoryUITestsLaunchTests.swift */,
-			);
-			path = "Employee DirectoryUITests";
 			sourceTree = "<group>";
 		};
 		43BCA8AE27C4188400E76D87 /* Employee List View */ = {
@@ -149,17 +129,19 @@
 				43BCA8B027C418F400E76D87 /* EmployeeTableViewCell.swift */,
 				43BCA8B127C418F400E76D87 /* EmployeeTableViewCell.xib */,
 				43BCA8B727C4240700E76D87 /* EmployeeListViewModel.swift */,
+				4321532027C481F000BC1F64 /* EmployeeTableViewCellViewModel.swift */,
 			);
 			path = "Employee List View";
 			sourceTree = "<group>";
 		};
-		43BCA8AF27C418A700E76D87 /* App Delegate */ = {
+		43BCA8AF27C418A700E76D87 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				4314AA0127B97B2100EC3EB6 /* AppDelegate.swift */,
 				4314AA0327B97B2100EC3EB6 /* SceneDelegate.swift */,
+				43BCA8CB27C4760B00E76D87 /* Api.swift */,
 			);
-			path = "App Delegate";
+			path = App;
 			sourceTree = "<group>";
 		};
 		43BCA8BD27C43AD400E76D87 /* Helpers */ = {
@@ -212,24 +194,6 @@
 			productReference = 4314AA1427B97B2600EC3EB6 /* Employee DirectoryTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		4314AA1D27B97B2600EC3EB6 /* Employee DirectoryUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4314AA2E27B97B2600EC3EB6 /* Build configuration list for PBXNativeTarget "Employee DirectoryUITests" */;
-			buildPhases = (
-				4314AA1A27B97B2600EC3EB6 /* Sources */,
-				4314AA1B27B97B2600EC3EB6 /* Frameworks */,
-				4314AA1C27B97B2600EC3EB6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4314AA2027B97B2600EC3EB6 /* PBXTargetDependency */,
-			);
-			name = "Employee DirectoryUITests";
-			productName = "Employee DirectoryUITests";
-			productReference = 4314AA1E27B97B2600EC3EB6 /* Employee DirectoryUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -244,10 +208,6 @@
 						CreatedOnToolsVersion = 13.2.1;
 					};
 					4314AA1327B97B2600EC3EB6 = {
-						CreatedOnToolsVersion = 13.2.1;
-						TestTargetID = 4314A9FD27B97B2100EC3EB6;
-					};
-					4314AA1D27B97B2600EC3EB6 = {
 						CreatedOnToolsVersion = 13.2.1;
 						TestTargetID = 4314A9FD27B97B2100EC3EB6;
 					};
@@ -272,7 +232,6 @@
 			targets = (
 				4314A9FD27B97B2100EC3EB6 /* Employee Directory */,
 				4314AA1327B97B2600EC3EB6 /* Employee DirectoryTests */,
-				4314AA1D27B97B2600EC3EB6 /* Employee DirectoryUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -297,13 +256,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4314AA1C27B97B2600EC3EB6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -316,6 +268,8 @@
 				43BCA8BF27C43AE200E76D87 /* ImageLoader.swift in Sources */,
 				43BCA8B227C418F400E76D87 /* EmployeeTableViewCell.swift in Sources */,
 				4314AA0227B97B2100EC3EB6 /* AppDelegate.swift in Sources */,
+				43BCA8CC27C4760B00E76D87 /* Api.swift in Sources */,
+				4321532127C481F000BC1F64 /* EmployeeTableViewCellViewModel.swift in Sources */,
 				4314AA0427B97B2100EC3EB6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,16 +278,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4314AA1927B97B2600EC3EB6 /* Employee_DirectoryTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4314AA1A27B97B2600EC3EB6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4314AA2527B97B2600EC3EB6 /* Employee_DirectoryUITestsLaunchTests.swift in Sources */,
-				4314AA2327B97B2600EC3EB6 /* Employee_DirectoryUITests.swift in Sources */,
+				43BCA8C827C467A800E76D87 /* EmployeeTableViewCellViewModelTests.swift in Sources */,
+				43BCA8C627C4678C00E76D87 /* ImageLoaderTests.swift in Sources */,
+				43BCA8C427C466EE00E76D87 /* EmployeeListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,11 +291,6 @@
 			isa = PBXTargetDependency;
 			target = 4314A9FD27B97B2100EC3EB6 /* Employee Directory */;
 			targetProxy = 4314AA1527B97B2600EC3EB6 /* PBXContainerItemProxy */;
-		};
-		4314AA2027B97B2600EC3EB6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4314A9FD27B97B2100EC3EB6 /* Employee Directory */;
-			targetProxy = 4314AA1F27B97B2600EC3EB6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -586,42 +528,6 @@
 			};
 			name = Release;
 		};
-		4314AA2F27B97B2600EC3EB6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7P7TXGEBT4;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dittmar.Employee-DirectoryUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Employee Directory";
-			};
-			name = Debug;
-		};
-		4314AA3027B97B2600EC3EB6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7P7TXGEBT4;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dittmar.Employee-DirectoryUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Employee Directory";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -648,15 +554,6 @@
 			buildConfigurations = (
 				4314AA2C27B97B2600EC3EB6 /* Debug */,
 				4314AA2D27B97B2600EC3EB6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4314AA2E27B97B2600EC3EB6 /* Build configuration list for PBXNativeTarget "Employee DirectoryUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4314AA2F27B97B2600EC3EB6 /* Debug */,
-				4314AA3027B97B2600EC3EB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

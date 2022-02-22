@@ -22,49 +22,29 @@ final class EmployeeTableViewCell: UITableViewCell {
   
   /**
    Configure the cell with a new employee's information
-   - Parameter employee: An `Employee` from the server that will be used to configure the cell's display info
+   - Parameter viewModel: All of the information needed to configure this cell
    */
-  func setUpCell(employee: Employee, imageLoader: ImageLoader = .shared) {
-    employeeEmailLabel.text = employee.emailAddress
-    employeeNameLabel.text = employee.fullName
-    employeePhoneLabel.text = employee.phoneNumber ?? NSLocalizedString("NoEmployeePhone", comment: "No phone provided")
-    employeeTeamLabel.text = employee.team.rawValue
+  func setUpCell(viewModel: EmployeeTableViewCellViewModel) {
+    employeeEmailLabel.text = viewModel.email
+    employeeNameLabel.text = viewModel.name
+    employeePhoneLabel.text = viewModel.phone
+    employeeTeamLabel.text = viewModel.teamName
     
-    if let imageUrlString = employee.smallPhotoUrlString,
-       let imageUrl = URL(string: imageUrlString) {
-      
-      imageLoader.loadImage(imageUrl: imageUrl) { [weak self] result in
-        DispatchQueue.main.async {
-          switch result {
-          case let .success(image):
-            self?.updateImage(image)
-          case .failure:
-            // TODO (dittmar): we might want to report the error somewhere (e.g., Crashlytics, Sentry.io, etc)
-            
-            // For some reason, we don't have an employee photo, so unset the image view
-            self?.updateImage(nil)
-          }
+    Task {
+      let image = await viewModel.loadImage()
+  
+      DispatchQueue.main.async {
+        // If we successfully load an image, use that.  If we don't,
+        // try to use the placeholder image.  If we don't find that
+        // either, just leave the image blank.
+        if let image = image {
+          self.employeeImageView.image = image
+        } else if let image = UIImage(named: "placeholder") {
+          self.employeeImageView.image = image
+        } else {
+          self.employeeImageView.image = nil
         }
       }
-    } else {
-      // If we don't have a valid image URL, make sure the image view returns to an empty state
-      updateImage(nil)
-    }
-  }
-  
-  /**
-   Set the employee image if we have one and set a placeholder if we don't
-   - Parameter image: The `UIImage` to set as the employee's photo or `nil` if the employee doesn't have a photo
-   */
-  private func updateImage(_ image: UIImage?) {
-    // If we have an image, use it.  If we don't, use the placeholder.  If we can't
-    // find the placeholder for some reason, just set the image to nil
-    if let image = image {
-      employeeImageView.image = image
-    } else if let image = UIImage(named: "placeholder") {
-      employeeImageView.image = image
-    } else {
-      employeeImageView.image = nil
     }
   }
 }

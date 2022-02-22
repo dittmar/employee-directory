@@ -8,6 +8,7 @@
 //
 
 import UIKit
+import EmployeeDirectoryApi
 
 final class EmployeeListViewController: UIViewController {
   private lazy var employeeListViewModel = EmployeeListViewModel(delegate: self)
@@ -71,7 +72,8 @@ extension EmployeeListViewController: UITableViewDataSource {
       return UITableViewCell()
     }
     
-    cell.setUpCell(employee: employeeListViewModel.employees[indexPath.row])
+    let viewModel = EmployeeTableViewCellViewModel(employee: employeeListViewModel.employees[indexPath.row])
+    cell.setUpCell(viewModel: viewModel)
     
     return cell
   }
