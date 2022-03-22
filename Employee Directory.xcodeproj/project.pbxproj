@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4304B65727EA2B8E008D1333 /* EmployeeDirectory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4304B65527EA2B8E008D1333 /* EmployeeDirectory.xcdatamodeld */; };
+		4304B65927EA2C15008D1333 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4304B65827EA2C15008D1333 /* CoreDataHelper.swift */; };
 		4314AA0227B97B2100EC3EB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4314AA0127B97B2100EC3EB6 /* AppDelegate.swift */; };
 		4314AA0427B97B2100EC3EB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4314AA0327B97B2100EC3EB6 /* SceneDelegate.swift */; };
 		4314AA0627B97B2100EC3EB6 /* EmployeeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4314AA0527B97B2100EC3EB6 /* EmployeeListViewController.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4304B65627EA2B8E008D1333 /* EmployeeDirectory.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmployeeDirectory.xcdatamodel; sourceTree = "<group>"; };
+		4304B65827EA2C15008D1333 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		4314A9FE27B97B2100EC3EB6 /* Employee Directory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Employee Directory.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4314AA0127B97B2100EC3EB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4314AA0327B97B2100EC3EB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 				4314AA0C27B97B2500EC3EB6 /* LaunchScreen.storyboard */,
 				4314AA0F27B97B2500EC3EB6 /* Info.plist */,
 				43BCA8BB27C429A600E76D87 /* English.strings */,
+				4304B65527EA2B8E008D1333 /* EmployeeDirectory.xcdatamodeld */,
 			);
 			path = "Employee Directory";
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				43BCA8BE27C43AE200E76D87 /* ImageLoader.swift */,
+				4304B65827EA2C15008D1333 /* CoreDataHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -263,7 +269,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4304B65927EA2C15008D1333 /* CoreDataHelper.swift in Sources */,
 				4314AA0627B97B2100EC3EB6 /* EmployeeListViewController.swift in Sources */,
+				4304B65727EA2B8E008D1333 /* EmployeeDirectory.xcdatamodeld in Sources */,
 				43BCA8B827C4240700E76D87 /* EmployeeListViewModel.swift in Sources */,
 				43BCA8BF27C43AE200E76D87 /* ImageLoader.swift in Sources */,
 				43BCA8B227C418F400E76D87 /* EmployeeTableViewCell.swift in Sources */,
@@ -565,7 +573,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/dittmar/employee-directory-api.git";
 			requirement = {
-				branch = main;
+				branch = interview;
 				kind = branch;
 			};
 		};
@@ -591,6 +599,19 @@
 			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		4304B65527EA2B8E008D1333 /* EmployeeDirectory.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4304B65627EA2B8E008D1333 /* EmployeeDirectory.xcdatamodel */,
+			);
+			currentVersion = 4304B65627EA2B8E008D1333 /* EmployeeDirectory.xcdatamodel */;
+			path = EmployeeDirectory.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4314A9F627B97B2100EC3EB6 /* Project object */;
 }

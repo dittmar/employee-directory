@@ -26,7 +26,11 @@ final class EmployeeListViewController: UIViewController {
     
     employeeTableView.register(UINib(nibName: String(describing: EmployeeTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: EmployeeTableViewCell.self))
     
-    loadEmployees(type: .empty)
+    employeeListViewModel.fetchFromCoreData()
+    
+    if employeeListViewModel.employees.isEmpty {
+      loadEmployees(type: .malformed)
+    }
   }
   
   // User tapped retry, so try loading employees again
@@ -80,6 +84,15 @@ extension EmployeeListViewController: UITableViewDataSource {
 }
 
 extension EmployeeListViewController: EmployeeListViewModelDelegate {
+  func receivedEmptyEmployees() {
+    let alert = UIAlertController(title: "Oh no!", message: "We didn't get any employees back from the server", preferredStyle: .alert)
+    
+    alert.addAction(UIAlertAction(title: "OK", style: .cancel))
+    DispatchQueue.main.async { [weak self] in
+      self?.present(alert, animated: true)
+    }
+  }
+  
   func didUpdateEmployees() {
     let hasEmployees = !employeeListViewModel.employees.isEmpty
     DispatchQueue.main.async {

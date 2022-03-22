@@ -11,6 +11,7 @@ import Foundation
 
 protocol EmployeeListViewModelDelegate: AnyObject {
   func didUpdateEmployees()
+  func receivedEmptyEmployees()
 }
 
 final class EmployeeListViewModel {
@@ -23,11 +24,23 @@ final class EmployeeListViewModel {
   
   private let api: Api
   private weak var delegate: EmployeeListViewModelDelegate?
-  private(set) var employees = [Employee]()
+  private(set) var employees = [Employee]() {
+    didSet {
+      delegate?.didUpdateEmployees()
+    }
+  }
   
   init(delegate: EmployeeListViewModelDelegate?, api: Api = .shared) {
     self.delegate = delegate
     self.api = api
+  }
+  
+  func fetchFromCoreData() {
+    do {
+      employees = try CoreDataHelper.shared.fetchEmployees()
+    } catch {
+      // TODO (dittmar):  error handling
+    }
   }
   
   /** Update the list of employees from the server and notify the UI that employees has been updated
@@ -44,7 +57,18 @@ final class EmployeeListViewModel {
       response = try await api.fetchEmployeesMalformed()
     }
 
+    if response.employees.isEmpty {
+      delegate?.receivedEmptyEmployees()
+      return
+    }
+    
     employees = response.employees
-    delegate?.didUpdateEmployees()
+    employees.forEach { employee in
+      do {
+        try employee.save()
+      } catch {
+        // TODO (dittmar): error saving employee
+      }
+    }
   }
 }
