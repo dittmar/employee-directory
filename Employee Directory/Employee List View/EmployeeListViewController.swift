@@ -64,7 +64,15 @@ final class EmployeeListViewController: UIViewController {
   }
 }
 
-extension EmployeeListViewController: UITableViewDelegate {}
+extension EmployeeListViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let employee = employeeListViewModel.employees[indexPath.row]
+    
+    let detailVC = EmployeeDetailViewController(employee: employee)
+    
+    navigationController?.pushViewController(detailVC, animated: true)
+  }
+}
 
 extension EmployeeListViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

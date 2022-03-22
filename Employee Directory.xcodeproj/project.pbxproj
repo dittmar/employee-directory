@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4304B65727EA2B8E008D1333 /* EmployeeDirectory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4304B65527EA2B8E008D1333 /* EmployeeDirectory.xcdatamodeld */; };
 		4304B65927EA2C15008D1333 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4304B65827EA2C15008D1333 /* CoreDataHelper.swift */; };
+		4304B65D27EA39CD008D1333 /* EmployeeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4304B65B27EA39CD008D1333 /* EmployeeDetailViewController.swift */; };
+		4304B65E27EA39CD008D1333 /* EmployeeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4304B65C27EA39CD008D1333 /* EmployeeDetailViewController.xib */; };
 		4314AA0227B97B2100EC3EB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4314AA0127B97B2100EC3EB6 /* AppDelegate.swift */; };
 		4314AA0427B97B2100EC3EB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4314AA0327B97B2100EC3EB6 /* SceneDelegate.swift */; };
 		4314AA0627B97B2100EC3EB6 /* EmployeeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4314AA0527B97B2100EC3EB6 /* EmployeeListViewController.swift */; };
@@ -42,6 +44,8 @@
 /* Begin PBXFileReference section */
 		4304B65627EA2B8E008D1333 /* EmployeeDirectory.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmployeeDirectory.xcdatamodel; sourceTree = "<group>"; };
 		4304B65827EA2C15008D1333 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		4304B65B27EA39CD008D1333 /* EmployeeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailViewController.swift; sourceTree = "<group>"; };
+		4304B65C27EA39CD008D1333 /* EmployeeDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeDetailViewController.xib; sourceTree = "<group>"; };
 		4314A9FE27B97B2100EC3EB6 /* Employee Directory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Employee Directory.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4314AA0127B97B2100EC3EB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4314AA0327B97B2100EC3EB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +87,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4304B65A27EA3992008D1333 /* Employee Detail View */ = {
+			isa = PBXGroup;
+			children = (
+				4304B65B27EA39CD008D1333 /* EmployeeDetailViewController.swift */,
+				4304B65C27EA39CD008D1333 /* EmployeeDetailViewController.xib */,
+			);
+			path = "Employee Detail View";
+			sourceTree = "<group>";
+		};
 		4314A9F527B97B2100EC3EB6 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				43BCA8AF27C418A700E76D87 /* App */,
+				4304B65A27EA3992008D1333 /* Employee Detail View */,
 				43BCA8AE27C4188400E76D87 /* Employee List View */,
 				43BCA8BD27C43AD400E76D87 /* Helpers */,
 				4314AA0A27B97B2500EC3EB6 /* Assets.xcassets */,
@@ -247,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4304B65E27EA39CD008D1333 /* EmployeeDetailViewController.xib in Resources */,
 				4314AA0E27B97B2500EC3EB6 /* LaunchScreen.storyboard in Resources */,
 				43BCA8B327C418F400E76D87 /* EmployeeTableViewCell.xib in Resources */,
 				43BCA8BC27C429A600E76D87 /* English.strings in Resources */,
@@ -276,6 +291,7 @@
 				43BCA8BF27C43AE200E76D87 /* ImageLoader.swift in Sources */,
 				43BCA8B227C418F400E76D87 /* EmployeeTableViewCell.swift in Sources */,
 				4314AA0227B97B2100EC3EB6 /* AppDelegate.swift in Sources */,
+				4304B65D27EA39CD008D1333 /* EmployeeDetailViewController.swift in Sources */,
 				43BCA8CC27C4760B00E76D87 /* Api.swift in Sources */,
 				4321532127C481F000BC1F64 /* EmployeeTableViewCellViewModel.swift in Sources */,
 				4314AA0427B97B2100EC3EB6 /* SceneDelegate.swift in Sources */,
